@@ -1,0 +1,41 @@
+{
+  "header": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "login": "Login",
+    "signup": "Sign Up",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "title": "Build Stunning Websites That Drive Results",
+    "subtitle": "Craft. Build. Ship Modern Websites With AI Support.",
+    "cta": "Get Started",
+    "demo": "View Demo",
+    "trustedBy": "Trusted by teams at :"
+  },
+  "auth": {
+    "signin": {
+      "title": "Login to your account",
+      "description": "Enter your email below to login to your account",
+      "email": "Email",
+      "password": "Password",
+      "forgot": "Forgot your password?",
+      "submit": "Login",
+      "google": "Login with Google",
+      "noAccount": "Don't have an account?",
+      "signup": "Sign up"
+    },
+    "signup": {
+      "title": "Create an account",
+      "description": "Enter your email below to create an account",
+      "email": "Email",
+      "password": "Password",
+      "forgot": "Forgot your password?",
+      "submit": "Sign up",
+      "google": "Sign up with Google",
+      "hasAccount": "Already have an account?",
+      "signin": "Sign in"
+    }
+  }
+}

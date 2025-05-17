@@ -1,0 +1,41 @@
+{
+  "header": {
+    "features": "Características",
+    "pricing": "Precios",
+    "about": "Acerca de",
+    "login": "Iniciar sesión",
+    "signup": "Registrarse",
+    "getStarted": "Comenzar"
+  },
+  "hero": {
+    "title": "Crea sitios web impresionantes que generan resultados",
+    "subtitle": "Crea. Construye. Lanza sitios modernos con soporte de IA.",
+    "cta": "Comenzar",
+    "demo": "Ver demo",
+    "trustedBy": "Confiado por equipos en :"
+  },
+  "auth": {
+    "signin": {
+      "title": "Inicia sesión en tu cuenta",
+      "description": "Ingresa tu email para iniciar sesión en tu cuenta",
+      "email": "Email",
+      "password": "Contraseña",
+      "forgot": "¿Olvidaste tu contraseña?",
+      "submit": "Iniciar sesión",
+      "google": "Iniciar sesión con Google",
+      "noAccount": "¿No tienes una cuenta?",
+      "signup": "Regístrate"
+    },
+    "signup": {
+      "title": "Crea una cuenta",
+      "description": "Ingresa tu email para crear una cuenta",
+      "email": "Email",
+      "password": "Contraseña",
+      "forgot": "¿Olvidaste tu contraseña?",
+      "submit": "Registrarse",
+      "google": "Registrarse con Google",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signin": "Iniciar sesión"
+    }
+  }
+}

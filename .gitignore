@@ -10,7 +10,7 @@
 !.yarn/releases
 !.yarn/versions
 .env
-src/generated/prisma/
+generated
 
 # testing
 /coverage

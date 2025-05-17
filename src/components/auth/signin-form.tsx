@@ -22,11 +22,13 @@ import {
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export function SignInForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const t = useTranslations("auth.signin");
   const form = useForm({
     defaultValues: {
       email: "",
@@ -52,10 +54,6 @@ export function SignInForm({
         onSuccess: () => {
           router.push("/dashboard");
         },
-        onError: (ctx) => {
-          setFormError(ctx.error.message ?? "Error desconocido");
-          setLoading(false);
-        },
       }
     );
     setLoading(false);
@@ -64,10 +62,8 @@ export function SignInForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle>Login to your account</CardTitle>
-          <CardDescription>
-            Enter your email below to login to your account
-          </CardDescription>
+          <CardTitle>{t("title")}</CardTitle>
+          <CardDescription>{t("description")}</CardDescription>
         </CardHeader>
         <CardContent>
           <Form {...form}>
@@ -78,7 +74,7 @@ export function SignInForm({
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>{t("email")}</FormLabel>
                       <FormControl>
                         <Input
                           placeholder="m@example.com"
@@ -96,12 +92,12 @@ export function SignInForm({
                   render={({ field }) => (
                     <FormItem>
                       <div className="flex items-center">
-                        <FormLabel>Password</FormLabel>
+                        <FormLabel>{t("password")}</FormLabel>
                         <a
                           href="#"
                           className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
                         >
-                          Forgot your password?
+                          {t("forgot")}
                         </a>
                       </div>
                       <FormControl>
@@ -113,10 +109,10 @@ export function SignInForm({
                 />
                 <div className="flex flex-col gap-3">
                   <Button type="submit" className="w-full" disabled={loading}>
-                    Login
+                    {t("submit")}
                   </Button>
                   <Button variant="outline" className="w-full">
-                    Login with Google
+                    {t("google")}
                   </Button>
                 </div>
               </div>
@@ -124,9 +120,9 @@ export function SignInForm({
                 {formError && (
                   <div className="text-destructive mb-2">{formError}</div>
                 )}
-                Don&apos;t have an account?{" "}
+                {t("noAccount")}{" "}
                 <Link href="/signup" className="underline underline-offset-4">
-                  Sign up
+                  {t("signup")}
                 </Link>
               </div>
             </form>

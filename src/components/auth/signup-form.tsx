@@ -23,11 +23,13 @@ import { useForm } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 export function SignUpForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const t = useTranslations("auth.signup");
   const form = useForm({
     defaultValues: {
       email: "",
@@ -67,10 +69,8 @@ export function SignUpForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle>Create an account</CardTitle>
-          <CardDescription>
-            Enter your email below to create an account
-          </CardDescription>
+          <CardTitle>{t("title")}</CardTitle>
+          <CardDescription>{t("description")}</CardDescription>
         </CardHeader>
         <CardContent>
           <Form {...form}>
@@ -81,7 +81,7 @@ export function SignUpForm({
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>{t("email")}</FormLabel>
                       <FormControl>
                         <Input
                           placeholder="m@example.com"
@@ -99,12 +99,12 @@ export function SignUpForm({
                   render={({ field }) => (
                     <FormItem>
                       <div className="flex items-center">
-                        <FormLabel>Password</FormLabel>
+                        <FormLabel>{t("password")}</FormLabel>
                         <a
                           href="#"
                           className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
                         >
-                          Forgot your password?
+                          {t("forgot")}
                         </a>
                       </div>
                       <FormControl>
@@ -116,10 +116,10 @@ export function SignUpForm({
                 />
                 <div className="flex flex-col gap-3">
                   <Button type="submit" className="w-full" disabled={loading}>
-                    Sign up
+                    {t("submit")}
                   </Button>
                   <Button variant="outline" className="w-full">
-                    Sign up with Google
+                    {t("google")}
                   </Button>
                 </div>
               </div>
@@ -127,13 +127,13 @@ export function SignUpForm({
                 {formError && (
                   <div className="text-destructive mb-2">{formError}</div>
                 )}
-                Already have an account?{" "}
+                {t("hasAccount")}{" "}
                 <Link
                   href="/login"
                   className="underline underline-offset-4"
                   prefetch
                 >
-                  Sign in
+                  {t("signin")}
                 </Link>
               </div>
             </form>

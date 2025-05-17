@@ -1,11 +1,11 @@
-import React from "react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { HeroHeader } from "./header";
-import { ArrowUp, Globe, Plus, Sparkle } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
+import { HeroHeader } from "./header";
 
 export default function HeroSection() {
+  const t = useTranslations("hero");
   return (
     <>
       <HeroHeader />
@@ -15,22 +15,22 @@ export default function HeroSection() {
             <div className="relative z-10 mx-auto max-w-5xl px-6">
               <div className="relative text-center">
                 <h1 className="mx-auto max-w-2xl text-balance text-4xl font-bold md:text-5xl">
-                  Build Stunning Websites That Drive Results
+                  {t("title")}
                 </h1>
 
                 <p className="text-muted-foreground mx-auto my-6 max-w-2xl text-balance text-xl">
-                  Craft. Build. Ship Modern Websites With AI Support.
+                  {t("subtitle")}
                 </p>
 
                 <div className="flex flex-col items-center justify-center gap-3 *:w-full sm:flex-row sm:*:w-auto">
                   <Button asChild size="lg">
                     <Link href="#link">
-                      <span className="text-nowrap">Get Started</span>
+                      <span className="text-nowrap">{t("cta")}</span>
                     </Link>
                   </Button>
                   <Button key={2} asChild size="lg" variant="outline">
                     <Link href="#link">
-                      <span className="text-nowrap">View Demo</span>
+                      <span className="text-nowrap">{t("demo")}</span>
                     </Link>
                   </Button>
                 </div>
@@ -56,7 +56,7 @@ export default function HeroSection() {
 
               <div className="mt-8">
                 <p className="text-muted-foreground text-center">
-                  Trusted by teams at :
+                  {t("trustedBy")}
                 </p>
                 <div className="mt-4 flex items-center justify-center gap-12">
                   <div className="flex">
