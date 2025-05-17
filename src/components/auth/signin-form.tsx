@@ -19,6 +19,9 @@ import {
   FormControl,
   FormMessage,
 } from "@/components/ui/form";
+import { authClient } from "@/lib/auth-client";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export function SignInForm({
   className,
@@ -30,8 +33,32 @@ export function SignInForm({
       password: "",
     },
   });
-  function onSubmit(values: { email: string; password: string }) {
-    // handle login
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [formError, setFormError] = useState("");
+
+  async function onSubmit(values: { email: string; password: string }) {
+    await authClient.signIn.email(
+      {
+        email: values.email,
+        password: values.password,
+        callbackURL: "/dashboard",
+      },
+      {
+        onRequest: () => {
+          setLoading(true);
+          setFormError("");
+        },
+        onSuccess: () => {
+          router.push("/dashboard");
+        },
+        onError: (ctx) => {
+          setFormError(ctx.error.message ?? "Error desconocido");
+          setLoading(false);
+        },
+      }
+    );
+    setLoading(false);
   }
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
@@ -85,7 +112,7 @@ export function SignInForm({
                   )}
                 />
                 <div className="flex flex-col gap-3">
-                  <Button type="submit" className="w-full">
+                  <Button type="submit" className="w-full" disabled={loading}>
                     Login
                   </Button>
                   <Button variant="outline" className="w-full">
@@ -94,6 +121,9 @@ export function SignInForm({
                 </div>
               </div>
               <div className="mt-4 text-center text-sm">
+                {formError && (
+                  <div className="text-destructive mb-2">{formError}</div>
+                )}
                 Don&apos;t have an account?{" "}
                 <Link href="/signup" className="underline underline-offset-4">
                   Sign up

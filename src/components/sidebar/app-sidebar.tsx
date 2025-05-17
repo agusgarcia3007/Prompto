@@ -32,6 +32,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { authClient } from "@/lib/auth-client";
 
 const data = {
   user: {
@@ -151,8 +152,17 @@ const data = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { data: session, isPending } = authClient.useSession();
+  const user = session?.user
+    ? {
+        name: session.user.name || session.user.email,
+        email: session.user.email,
+        avatar: session.user.image || "",
+      }
+    : null;
+
   return (
-    <Sidebar collapsible="offcanvas" {...props}>
+    <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -174,7 +184,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        {isPending ? (
+          <div className="p-4 text-xs text-muted-foreground">
+            Loading user...
+          </div>
+        ) : user ? (
+          <NavUser user={user} />
+        ) : (
+          <div className="p-4 text-xs text-muted-foreground">Not signed in</div>
+        )}
       </SidebarFooter>
     </Sidebar>
   );
