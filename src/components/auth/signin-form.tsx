@@ -1,5 +1,5 @@
 "use client";
-
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,20 +8,19 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import Link from "next/link";
+import { useForm } from "react-hook-form";
 import {
   Form,
-  FormControl,
   FormField,
   FormItem,
   FormLabel,
+  FormControl,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { useForm } from "react-hook-form";
 
-export function SignUpForm({
+export function SignInForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
@@ -32,15 +31,15 @@ export function SignUpForm({
     },
   });
   function onSubmit(values: { email: string; password: string }) {
-    // handle signup
+    // handle login
   }
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle>Create an account</CardTitle>
+          <CardTitle>Login to your account</CardTitle>
           <CardDescription>
-            Enter your email below to create an account
+            Enter your email below to login to your account
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -87,21 +86,17 @@ export function SignUpForm({
                 />
                 <div className="flex flex-col gap-3">
                   <Button type="submit" className="w-full">
-                    Sign up
+                    Login
                   </Button>
                   <Button variant="outline" className="w-full">
-                    Sign up with Google
+                    Login with Google
                   </Button>
                 </div>
               </div>
               <div className="mt-4 text-center text-sm">
-                Already have an account?{" "}
-                <Link
-                  href="/login"
-                  className="underline underline-offset-4"
-                  prefetch
-                >
-                  Sign in
+                Don&apos;t have an account?{" "}
+                <Link href="/signup" className="underline underline-offset-4">
+                  Sign up
                 </Link>
               </div>
             </form>
