@@ -1,8 +1,8 @@
-# 🧠 AtlasRAG
+# 🧠 Prompto
 
-**AtlasRAG** es la forma más simple y poderosa de crear un chatbot inteligente entrenado con tus propios documentos. Subí PDFs, DOCs o artículos, y generá en segundos un asistente capaz de responder con precisión gracias a la tecnología RAG (Retrieval-Augmented Generation), Pinecone y los mejores LLMs del mercado.
+**Prompto** es la forma más simple y poderosa de crear un chatbot inteligente entrenado con tus propios documentos. Subí PDFs, DOCs o artículos, y generá en segundos un asistente capaz de responder con precisión gracias a la tecnología RAG (Retrieval-Augmented Generation), Pinecone y los mejores LLMs del mercado.
 
-## 🚀 ¿Qué podés hacer con AtlasRAG?
+## 🚀 ¿Qué podés hacer con Prompto?
 
 - 📄 **Entrená con tus propios archivos**: subí PDFs, textos, links o tu wiki interna.
 - 🤖 **Generá un chatbot inteligente**, contextual y listo para usar.
@@ -27,4 +27,4 @@
 ---
 
 👉 **Empezá gratis** y tené tu primer bot listo en minutos.  
-🔗 [https://AtlasRAG.com](https://AtlasRAG.com) (placeholder)
+🔗 [https://Prompto.com](https://Prompto.com) (placeholder)

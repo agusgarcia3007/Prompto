@@ -5,14 +5,43 @@
     "about": "Acerca de",
     "login": "Iniciar sesión",
     "signup": "Registrarse",
-    "getStarted": "Comenzar"
+    "getStarted": "Comenzar",
+    "docs": "Documentación"
   },
   "hero": {
-    "title": "Crea sitios web impresionantes que generan resultados",
-    "subtitle": "Crea. Construye. Lanza sitios modernos con soporte de IA.",
-    "cta": "Comenzar",
+    "title": {
+      "default": "Chatbots de IA Entrenados con {highlight}",
+      "highlight": "Tu Contenido"
+    },
+    "subtitle": "Subí tus documentos y creá chatbots inteligentes que respondan con precisión. Sin código necesario.",
+    "cta": "Comenzar gratis",
     "demo": "Ver demo",
-    "trustedBy": "Confiado por equipos en :"
+    "trustedBy": "Confiado por equipos en :",
+    "waitlistTitle": "Obtené acceso anticipado",
+    "waitlistSubtitle": "Unite a nuestra lista de espera y sé de los primeros en probar Prompto",
+    "badge": "Asistencia Potenciada por IA",
+    "techBadge": "Tecnología Avanzada",
+    "feature1": {
+      "title": "Entrená con tus archivos",
+      "description": "Subí PDFs, textos, links o tu wiki interna"
+    },
+    "feature2": {
+      "title": "Sin código",
+      "description": "No necesitás saber nada de IA, vectores ni APIs"
+    },
+    "feature3": {
+      "title": "Personalizalo por completo",
+      "description": "Colores, tono, comportamiento y branding a tu gusto"
+    },
+    "feature4": {
+      "title": "Compartilo o embebelo",
+      "description": "Usalo donde quieras - web, WhatsApp, Slack y más"
+    },
+    "techTitle": "Impulsado por tecnología avanzada",
+    "tech1": "Pinecone",
+    "tech2": "GPT-4",
+    "tech3": "LangChain",
+    "tech4": "RAG"
   },
   "auth": {
     "signin": {

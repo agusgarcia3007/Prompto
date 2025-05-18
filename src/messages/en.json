@@ -5,14 +5,43 @@
     "about": "About",
     "login": "Login",
     "signup": "Sign Up",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "docs": "Documentation"
   },
   "hero": {
-    "title": "Build Stunning Websites That Drive Results",
-    "subtitle": "Craft. Build. Ship Modern Websites With AI Support.",
-    "cta": "Get Started",
-    "demo": "View Demo",
-    "trustedBy": "Trusted by teams at :"
+    "title": {
+      "default": "AI Chatbots Trained on {highlight}",
+      "highlight": "Your Content"
+    },
+    "subtitle": "Upload your documents and create smart chatbots that answer with precision. No coding required.",
+    "cta": "Start for free",
+    "demo": "See demo",
+    "trustedBy": "Trusted by teams at :",
+    "waitlistTitle": "Get early access",
+    "waitlistSubtitle": "Join our waitlist and be among the first to try Prompto",
+    "badge": "AI-Powered Assistance",
+    "techBadge": "Advanced Technology",
+    "feature1": {
+      "title": "Train with your files",
+      "description": "Upload PDFs, texts, links or your internal wiki"
+    },
+    "feature2": {
+      "title": "No code required",
+      "description": "You don't need to know about AI, vectors or APIs"
+    },
+    "feature3": {
+      "title": "Customize completely",
+      "description": "Colors, tone, behavior and branding to match your style"
+    },
+    "feature4": {
+      "title": "Share or embed",
+      "description": "Use it anywhere - web, WhatsApp, Slack, and more"
+    },
+    "techTitle": "Powered by advanced technology",
+    "tech1": "Pinecone",
+    "tech2": "GPT-4",
+    "tech3": "LangChain",
+    "tech4": "RAG"
   },
   "auth": {
     "signin": {
