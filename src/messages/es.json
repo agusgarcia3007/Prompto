@@ -10,8 +10,7 @@
   },
   "hero": {
     "title": {
-      "default": "Chatbots de IA Entrenados con {highlight}",
-      "highlight": "Tu Contenido"
+      "default": "Chatbots de IA Entrenados con <highlight>Tu Contenido</highlight>"
     },
     "subtitle": "Subí tus documentos y creá chatbots inteligentes que respondan con precisión. Sin código necesario.",
     "cta": "Comenzar gratis",

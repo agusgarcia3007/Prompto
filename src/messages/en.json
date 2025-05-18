@@ -10,8 +10,7 @@
   },
   "hero": {
     "title": {
-      "default": "AI Chatbots Trained on {highlight}",
-      "highlight": "Your Content"
+      "default": "AI Chatbots Trained on <highlight>Your Content</highlight>"
     },
     "subtitle": "Upload your documents and create smart chatbots that answer with precision. No coding required.",
     "cta": "Start for free",

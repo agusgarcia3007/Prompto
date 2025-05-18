@@ -1,10 +1,9 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { IconSparkles } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 import { HeroHeader } from "./header";
 import { Waitlist } from "./waitlist";
-import { Badge } from "@/components/ui/badge";
 
 export default function Landing() {
   const t = useTranslations("hero");
