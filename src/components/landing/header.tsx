@@ -1,14 +1,11 @@
 "use client";
-import Link from "next/link";
 import { Logo } from "@/components/landing/logo";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import React from "react";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import React from "react";
 
 export const HeroHeader = () => {
-  const t = useTranslations("header");
   const [menuState, setMenuState] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
 
