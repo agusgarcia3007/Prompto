@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AtlasRAG",
-  description: "AtlasRAG",
+  title: "Prompto",
+  description: "Prompto",
 };
 
 export default async function RootLayout({
